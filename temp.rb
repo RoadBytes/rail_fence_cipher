@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 # This is needed to count up and down the rails of the fence
 
-def set_rail_assignments_array(number_of_rails)
+def initialize_rail_assignments_array(number_of_rails)
   # counts up to last rail and back down to 1
   # [0, 1, 2, ... n, n - 1, ..., 1]
   # for 4 rails => [0, 1, 2, 3, 2, 1]
@@ -20,4 +21,3 @@ def set_rail_assignments_array(number_of_rails)
 
   array
 end
-
