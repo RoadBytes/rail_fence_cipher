@@ -88,6 +88,9 @@ class Fence
   end
 
   def rails_chunk_sizes(message)
+    # We only need to figure out how big each rail is
+    # This way, when we decode, we can pull the right number of characters
+    # from the given message and assign it to the correct rail
     temp_fence = Fence.new(number_of_rails)
     temp_fence.add_characters_of(message)
     temp_rails_hash = temp_fence.rails_hash
